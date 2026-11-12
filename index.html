@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlimentaAI · Calorías y macros con una foto</title>
+  <meta name="description" content="AlimentaAI usa Visión Computacional e IA para calcular calorías y macronutrientes con una foto y una despensa digital.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="container nav">
+    <a href="#top" class="logo"><span class="logo-mark">A</span>AlimentaAI</a>
+    <nav id="menu" class="menu" aria-label="Principal">
+      <a href="#problema">Problema</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#demo">Demo</a>
+      <a href="#tecnologia">Tecnología</a>
+      <a href="#cloud">Cloud</a>
+      <a href="#seguridad">RGPD</a>
+      <a href="#sostenibilidad">Sostenibilidad</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Cambiar tema">🌙</button>
+      <button id="menuToggle" class="icon-btn menu-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <span class="badge">HealthTech · FoodTech · IA</span>
+        <h1>Cuenta calorías con <span class="grad">una foto</span>, sin pesar nada.</h1>
+        <p class="lead">AlimentaAI cruza la imagen de tu plato con los ingredientes reales de tu <strong>despensa digital</strong> para ofrecer una precisión muy superior a las apps tradicionales.</p>
+        <div class="cta">
+          <a href="#demo" class="btn btn-primary">Probar la demo</a>
+          <a href="#como-funciona" class="btn btn-ghost">Cómo funciona</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong data-count="3">0</strong><span>tecnologías clave de IA y cloud</span></li>
+          <li><strong data-count="5">0</strong><span>servicios AWS en la arquitectura</span></li>
+          <li><strong data-count="100" data-suffix="%">0</strong><span>energía renovable en el cloud</span></li>
+        </ul>
+      </div>
+      <div class="phone reveal" aria-hidden="true">
+        <div class="phone-screen">
+          <div class="scan">
+            <div class="plate">🍝</div>
+            <div class="scan-line"></div>
+          </div>
+          <div class="phone-card">
+            <h4>Pasta con tomate</h4>
+            <div class="bar"><span style="--w:62%"></span><em>Hidratos 62 g</em></div>
+            <div class="bar b2"><span style="--w:28%"></span><em>Proteína 18 g</em></div>
+            <div class="bar b3"><span style="--w:20%"></span><em>Grasa 12 g</em></div>
+            <p class="kcal">480 kcal</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section id="problema" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">El problema</span>
+        <h2>Contar calorías hoy es lento, manual y poco fiable</h2>
+        <p>El seguimiento nutricional tradicional depende de procesos que la mayoría de personas abandona a los pocos días.</p>
+      </div>
+      <div class="cards three">
+        <article class="card reveal"><div class="ico">🏷️</div><h3>Lectura manual de etiquetas</h3><p>Cada producto exige leer y transcribir los valores nutricionales a mano.</p></article>
+        <article class="card reveal"><div class="ico">⚖️</div><h3>Pesar cada ingrediente</h3><p>La balanza de cocina, los cuadernos y las hojas de cálculo generan errores y cansancio.</p></article>
+        <article class="card reveal"><div class="ico">🩺</div><h3>Consultas puntuales</h3><p>Los ajustes de dieta dependen de visitas presenciales periódicas al nutricionista.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">La solución</span>
+        <h2>Cómo funciona la despensa digital</h2>
+        <p>Dos pasos sencillos que combinan OCR, visión por computador y Machine Learning.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal"><span class="num">1</span><h3>Supermercado</h3><p>Fotografías la etiqueta nutricional de lo que compras. El OCR extrae calorías y macros y lo guarda en tu despensa.</p></div>
+        <div class="step reveal"><span class="num">2</span><h3>Cocina</h3><p>Fotografías el plato. La IA segmenta los alimentos y los cruza con los ingredientes reales de tu cuenta.</p></div>
+        <div class="step reveal"><span class="num">3</span><h3>Restaurante</h3><p>Sin etiquetas, las redes neuronales estiman porciones e ingredientes ocultos (aceites, salsas) con margen de error indicado.</p></div>
+        <div class="step reveal"><span class="num">4</span><h3>Dieta y compras</h3><p>Planes personalizados según tu consumo real, recomendaciones de compra y trazabilidad de marcas socias.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Demo interactiva</span>
+        <h2>Simula el cruce con tu despensa</h2>
+        <p>Selecciona los productos de tu despensa y ajusta las raciones. Los valores son ilustrativos.</p>
+      </div>
+      <div class="demo reveal">
+        <div class="demo-col">
+          <h3>🧺 Mi despensa</h3>
+          <div id="pantry" class="pantry"></div>
+        </div>
+        <div class="demo-col">
+          <h3>🍽️ Mi plato</h3>
+          <div id="plateList" class="plate-list"><p class="muted">Añade productos de la despensa para analizar tu plato.</p></div>
+          <div class="totals" id="totals" hidden>
+            <div class="total big"><span id="tKcal">0</span><small>kcal</small></div>
+            <div class="macro"><b id="tP">0</b> g<small>Proteínas</small></div>
+            <div class="macro"><b id="tC">0</b> g<small>Hidratos</small></div>
+            <div class="macro"><b id="tG">0</b> g<small>Grasas</small></div>
+          </div>
+          <div class="bar-split" id="split" hidden><span id="sP"></span><span id="sC"></span><span id="sG"></span></div>
+          <button id="clearPlate" class="btn btn-ghost small" hidden>Vaciar plato</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIA -->
+  <section id="tecnologia" class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Tecnologías habilitadoras</span>
+        <h2>Cuatro TDH en el núcleo del negocio</h2>
+      </div>
+      <div class="cards four">
+        <article class="card reveal"><div class="ico">🧠</div><h3>Inteligencia Artificial</h3><p>Visión Computacional y Machine Learning: OCR de etiquetas, segmentación de alimentos y estimación de porciones.</p></article>
+        <article class="card reveal"><div class="ico">☁️</div><h3>Cloud Computing</h3><p>Procesa fotos en milisegundos, almacena despensas y escala en las horas punta de comida y cena.</p></article>
+        <article class="card reveal"><div class="ico">📊</div><h3>Big Data</h3><p>Analiza patrones de consumo e inventarios para recomendar compras y dietas adaptadas.</p></article>
+        <article class="card reveal"><div class="ico">🔐</div><h3>Ciberseguridad</h3><p>Cifrado en tránsito y en reposo para proteger datos de salud e imágenes privadas.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOUD -->
+  <section id="cloud" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Migración a la nube</span>
+        <h2>Nube pública con PaaS y Serverless en AWS</h2>
+        <p>Sistemas que pasan del entorno local a la nube, con el servicio elegido y su justificación.</p>
+      </div>
+
+      <div class="cloud-facts">
+        <div class="fact reveal"><small>Tipo de nube</small><strong>Pública (VPC aislada)</strong><p>Pago por uso, elasticidad en picos (13–15 h y 20–22 h) y acceso a GPUs sin mantenimiento físico.</p></div>
+        <div class="fact reveal"><small>Nivel de servicio</small><strong>PaaS + Serverless</strong><p>El equipo se centra en el código, los modelos de IA y la protección de datos; el proveedor gestiona el resto.</p></div>
+        <div class="fact reveal"><small>Región UE</small><strong>eu-south-2 / eu-west-1</strong><p>España o Irlanda, para cumplir el RGPD dentro de la Unión Europea.</p></div>
+      </div>
+
+      <div class="tabs reveal" role="tablist" aria-label="Servicios AWS">
+        <div class="tab-list" id="tabList"></div>
+        <div class="tab-panel" id="tabPanel" role="tabpanel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURIDAD -->
+  <section id="seguridad" class="section alt">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow">Seguridad y RGPD</span>
+        <h2>Datos de salud: el máximo nivel de protección</h2>
+        <p>Los hábitos alimentarios y los perfiles biométricos son <strong>datos de categoría especial</strong> según el RGPD. Por eso la seguridad está integrada en el diseño de la arquitectura.</p>
+        <ul class="checks">
+          <li>Cifrado en tránsito (envío de la foto) y en reposo (S3, DynamoDB).</li>
+          <li>Gestión de claves con AWS KMS y accesos mínimos con AWS IAM.</li>
+          <li>Supervisión por el perfil de Ciberseguridad / DPO.</li>
+          <li>Evaluación de Impacto (EIPD) realizada.</li>
+        </ul>
+      </div>
+      <div class="shield reveal" aria-hidden="true"><span>🛡️</span></div>
+    </div>
+  </section>
+
+  <!-- SOSTENIBILIDAD -->
+  <section id="sostenibilidad" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Sostenibilidad</span>
+        <h2>Tecnología con impacto positivo</h2>
+      </div>
+      <div class="cards three">
+        <article class="card reveal"><div class="ico">🌱</div><h3>Green Cloud</h3><p>Evitar servidores propios con baja utilización reduce el consumo energético. Los grandes proveedores operan con energía renovable y refrigeración eficiente.</p></article>
+        <article class="card reveal"><div class="ico">🥦</div><h3>Menos desperdicio</h3><p>Saber qué hay en casa y recibir recetas con esos productos reduce el desperdicio alimentario doméstico.</p></article>
+        <article class="card reveal"><div class="ico">🤝</div><h3>Cadenas cortas</h3><p>La trazabilidad de origen visibiliza marcas sostenibles, transparentes y de proximidad.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Equipo técnico</span>
+        <h2>Perfiles para un producto de IA en la nube</h2>
+      </div>
+      <div class="cards three">
+        <article class="card center reveal"><div class="ico">👁️</div><h3>Especialista en Visión Computacional</h3><p>Entrena y mejora los modelos de OCR y reconocimiento de platos.</p></article>
+        <article class="card center reveal"><div class="ico">🏗️</div><h3>Arquitecto Cloud</h3><p>Diseña la infraestructura escalable y serverless.</p></article>
+        <article class="card center reveal"><div class="ico">🔒</div><h3>Especialista en Ciberseguridad</h3><p>Garantiza cifrado, accesos y cumplimiento del RGPD.</p></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container foot">
+    <div><a href="#top" class="logo"><span class="logo-mark">A</span>AlimentaAI</a><p class="muted">Setor TIC aplicado a Saúde, Nutrição e Bem-estar.</p></div>
+    <p class="muted">Proyecto académico · Miguel Ángel y Khalid</p>
+  </div>
+</footer>
+
+<button id="toTop" class="to-top" aria-label="Volver arriba" hidden>↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
